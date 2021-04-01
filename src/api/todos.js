@@ -13,6 +13,7 @@ export default class Todos {
 
     async update({id, text, done}) {
         const { data } = await axios.put(`/todos/${id}`, {text, done})
+        return data
     }
 
     async destroy({id}) {
